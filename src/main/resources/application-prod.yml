@@ -1,0 +1,17 @@
+server:
+  port: 8601
+spring:
+  application:
+    name: ams-eureka-server
+
+eureka:
+  instance:
+    hostname: 192.168.103.85
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://192.168.103.86:8602/eureka/
+  server:
+    enable-self-preservation: true
+    eviction-interval-timer-in-ms: 4000

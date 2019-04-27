@@ -1,0 +1,17 @@
+server:
+  port: 8880
+spring:
+  application:
+    name: ams-eureka-server
+
+eureka:
+    instance:
+        statusPageUrlPath: /info
+        healthCheckUrlPath: /health
+        prefer-ip-address: false
+    client:
+        serviceUrl:
+            defaultZone: http://127.0.0.1:8880/eureka/
+    server:
+      enable-self-preservation: false
+      eviction-interval-timer-in-ms: 4000
